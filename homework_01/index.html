@@ -1,152 +1,159 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <title>hw</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <div id="wrapper">
-         <div id="main">
-            <div id="container">
-               <div id="content" role="main">
-                  <header>
-                     <img src="epam_logo.svg" alt="logo">
-                     <nav>
-                        <a href="#">
-                        <b>HTML</b>
-                        </a>
-                        <a href="#">
-                        <b>List</b>
-                        </a>
-                        <a href="#">
-                        <b>Table</b>
-                        </a>
-                        <a href="#">
-                        <b>Text formats</b>
-                        </a>
-                        <a href="#">
-                        <b>Blockquotes</b>
-                        </a>
-                     </nav>
-                  </header>
-                  <hr>
-                  <h1>
-                     <strong> HTML Elements</strong>
-                  </h1>
-                  <hr>
-                  <h2>Ordered List</h2>
-                  <ul>
-                     <li>
-                        <h2>Heading 1</h2>
-                        <ul>
-                           <li>
-                              <h2>Heading 2</h2>
-                              <ul>
-                                 <li>
-                                    <h3>Heading 3</h3>
-                                 </li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-                  <ol>
-                     <li>
-                        <h4>Heading 4</h4>
-                        <ol>
-                           <li>
-                              <h5>Heading 5</h5>
-                              <ol>
-                                 <li>
-                                    <h6>Heading 6</h6>
-                                 </li>
-                              </ol>
-                           </li>
-                        </ol>
-                     </li>
-                  </ol>
-                  <h3>Definition List</h3>
-                  <dl>
-                     <dt>defines terms 1</dt>
-                     <dd>description 1</dd>
-                     <dt>defines terms 2</dt>
-                     <dd>description 2</dd>
-                  </dl>
-                  <h2>Details</h2>
-                  <details open>
-                     <summary>Even more details open</summary>
-                     <p>Here are even more details about the details.</p>
-                  </details>
-                  <details>
-                     <summary>Even more details close </summary>
-                     <p>Here are even more details about the details.</p>
-                  </details>
-                  <hr>
-                  <h2>Table</h2>
-                  <!-- table start -->
-                  <table>
-                     <thead>
-                        <tr>
-                           <th>Elements</th>
-                           <th>Elements</th>
-                           <th>Elements</th>
-                        </tr>
-                     </thead>
-                     <!-- start of table body -->
-                     <tbody>
-                        <!-- start of first table row -->
-                        <tr>
-                           <td>
-                              <b>strong</b>
-                           </td>
-                           <td>H
-                              <sub>2</sub>O
-                           </td>
-                           <td>
-                              <a href="#">Test link</a>
-                           </td>
-                           <!--end of first table row -->
-                        </tr>
-                        <!-- start of second table row -->
-                        <tr>
-                           <td>
-                              <i>Italic</i>
-                           </td>
-                           <td>
-                              <u>Underline.</u>
-                           </td>
-                           <td>
-                              <del>delete</del>
-                           </td>
-                           <!--end of second table row -->
-                        </tr>
-                        <!-- start of third table row -->
-                        <tr>
-                           <td>
-                              <abbr title="a shortened form of a word or phrase.">Abbreviation</abbr>
-                           </td>
-                           <td>5
-                              <sup>3</sup>=125
-                           </td>
-                           <td>
-                              <ins>Inserted</ins>
-                           </td>
-                           <!-- end of third table row -->
-                        </tr>
-                        <!-- end of table body -->
-                     </tbody>
-                     <!-- table end -->
-                  </table>
-                  <hr>
-                  <h2>Text formats</h2>
-                  <article>
-                     <p>Article Text</p>
-                     <h2> Article title</h2>
-                     <p> Article description</p>
-                  </article>
-                  <h3>Preformatted Text</h3>
-                  <pre>
+
+<head>
+  <meta charset="utf-8">
+  <title>hw</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="container">
+        <div id="content" role="main">
+          <header>
+            <img src="epam_logo.svg" alt="logo">
+            <nav>
+              <a href="#htmlElements">
+                <b>HTML</b>
+              </a>
+              <a href="#listSection">
+                <b>List</b>
+              </a>
+              <a href="#tableSection">
+                <b>Table</b>
+              </a>
+              <a href="#textFormats">
+                <b>Text formats</b>
+              </a>
+              <a href="#blockquotesSection">
+                <b>Blockquotes</b>
+              </a>
+            </nav>
+          </header>
+          <hr>
+          <section>
+            <h1 id="htmlElements">
+              <strong>HTML Elements</strong>
+            </h1>
+            <hr>
+            <h2 id="listSection">Ordered List</h2>
+            <ul>
+              <!-- start of first Li group -->
+              <li>
+                <h1>Heading 1</h1>
+                <ul>
+                  <li>
+                    <h2>Heading 2</h2>
+                    <ul>
+                      <li>
+                        <h3>Heading 3</h3>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- end of first Li group -->
+            </ul>
+            <ol>
+              <li>
+                <h4>Heading 4</h4>
+                <ol>
+                  <li>
+                    <h5>Heading 5</h5>
+                    <ol>
+                      <li>
+                        <h6>Heading 6</h6>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>Definition List</h3>
+            <dl>
+              <dt>defines terms 1</dt>
+              <dd>description 1</dd>
+              <dt>defines terms 2</dt>
+              <dd>description 2</dd>
+            </dl>
+            <h2>Details</h2>
+            <details open>
+              <summary>Even more details open</summary>
+              <p>Here are even more details about the details.</p>
+            </details>
+            <details>
+              <summary>Even more details close </summary>
+              <p>Here are even more details about the details.</p>
+            </details>
+            <hr>
+            <h2>Table</h2>
+            <!-- table start -->
+            <table id="tableSection">
+              <thead>
+                <tr>
+                  <th>Elements</th>
+                  <th>Elements</th>
+                  <th>Elements</th>
+                </tr>
+              </thead>
+              <!-- start of table body -->
+              <tbody>
+                <!-- start of first table row -->
+                <tr>
+                  <td>
+                    <b>strong</b>
+                  </td>
+                  <td>H
+                    <sub>2</sub>O
+                  </td>
+                  <td>
+                    <a href="#">Test link</a>
+                  </td>
+                  <!--end of first table row -->
+                </tr>
+                <!-- start of second table row -->
+                <tr>
+                  <td>
+                    <i>Italic</i>
+                  </td>
+                  <td>
+                    <u>Underline.</u>
+                  </td>
+                  <td>
+                    <del>delete</del>
+                  </td>
+                  <!--end of second table row -->
+                </tr>
+                <!-- start of third table row -->
+                <tr>
+                  <td>
+                    <abbr title="a shortened form of a word or phrase.">Abbreviation</abbr>
+                  </td>
+                  <td>5
+                    <sup>3</sup>=125
+                  </td>
+                  <td>
+                    <ins>Inserted</ins>
+                  </td>
+                  <!-- end of third table row -->
+                </tr>
+                <!-- end of table body -->
+              </tbody>
+              <!-- table end -->
+            </table>
+            <hr>
+            <h2 id="textFormats">Text formats</h2>
+            <article>
+              <p> Article Text</p>
+            </article>
+            <article>
+              <h2> Article title</h2>
+              <p>Article description</p>
+            </article>
+            <h3>Preformatted Text</h3>
+            <pre>
               Text
               in a pre element
                 is displayed in a fixed-width
@@ -154,8 +161,8 @@
             both           spaces and
                 line breaks
           </pre>
-                  <h3>Code</h3>
-                  <pre>
+            <h3>Code</h3>
+            <pre>
           <code>
             .wrapper {
             display: grid;
@@ -163,19 +170,22 @@
             grid-gap: 10px;
             grid-auto-rows: minmax(100px, auto);
                       }
+                      
         </code>
       </pre>
-                  <h2>Blockquotes</h2>
-                  <p> Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
-                  <blockquote>
-                     Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if
-                     you give them tools, they'll do wonderful things with them.
-                     <br/>
-                     <a href="https://en.wikipedia.org/wiki/Steve_Jobs" title="And here’s a bit of trailing text." rel="author">Steve Jobs</a>
-                  </blockquote>
-                  <footer>Copyright Epam Systems</footer>
-               </div>
-            </div>
-         </div>
+            <h2 id="blockquotesSection">Blockquotes</h2>
+            <p> Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+            <blockquote>
+              Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if
+              you give them tools, they'll do wonderful things with them.
+              <br/>
+              <a href="https://en.wikipedia.org/wiki/Steve_Jobs" title="And here’s a bit of trailing text." rel="author">Steve Jobs</a>
+              <p hidden> And here’s a bit of trailing text</p>
+            </blockquote>
+          </section>
+          <footer>Copyright Epam Systems</footer>
+        </div>
       </div>
-   </body>
+    </div>
+  </div>
+</body>
