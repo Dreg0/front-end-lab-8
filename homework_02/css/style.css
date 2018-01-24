@@ -304,6 +304,25 @@ body {
 
 
 /* First task */
+@media print {
+
+.tm-sidebar {
+    display: none;
+}
+ .tm-main-content {
+        margin-left: 0;
+}
+#home {
+    margin-top: 30px;
+    padding: 0;
+    height: 200px;
+}
+section:nth-child(n+3) {
+    display: none;
+}
+#about {
+    display: none; 
+}
 
 /* third-task
  Change color of first letter in each paragraphs to 76cdd7,  Font size to 30px
@@ -381,7 +400,7 @@ We need silver border on the bottom side of all list item. But last one should n
     color: #ff0000;
  }
 
-
+/* optional task */
  @media (max-width:1139px) and (min-width: 834px) {
     .tm-sidebar{
        overflow: hidden;
