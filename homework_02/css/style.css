@@ -303,14 +303,13 @@ body {
 }
 
 
-/* First task */
+/* 1 task */
 @media print {
-
 .tm-sidebar {
     display: none;
 }
  .tm-main-content {
-        margin-left: 0;
+     margin-left: 0;
 }
 #home {
     margin-top: 30px;
@@ -322,9 +321,9 @@ section:nth-child(n+3) {
 }
 #about {
     display: none; 
-}
+}}
 
-/* third-task
+/* 3-task
  Change color of first letter in each paragraphs to 76cdd7,  Font size to 30px
 */
  p::first-letter { 
@@ -332,7 +331,7 @@ section:nth-child(n+3) {
     color: #76cdd7;
 }
 
-/*  fourth task
+/*  4 task
     Add box shadow to sidebar and each content block
     Param:
     1. horizontal length (+'n' px. - to the right, -'n' px. - to the left)
@@ -342,17 +341,17 @@ section:nth-child(n+3) {
 */
 .tm-sidebar,
 .tm-content-box {
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5); 
 }
 
-/*  Fith task
+/*  5 task
  Add silver border to each img which is in <a> tag in gallery-container 2px width
  */
  .gallery-container a img {
      border: 2px solid #c0c0c0;
  }
 
-/* Sixth task
+/* 6 task
 Change color of ‘How We Do It’ to gainsboro add letter spacing 5px
 */
 .carousel-content .flex-item .tm-section-title {
@@ -360,14 +359,14 @@ Change color of ‘How We Do It’ to gainsboro add letter spacing 5px
     letter-spacing: 5px;
 }
 
-/* Seventh task
+/* 7 task
 Each first paragraph which placed after h2 tag should have italic font style
 */
 h2 + p {
     font-style: italic;
 }
 
-/* Eighth task
+/* 8 task
    Text in paragraph should look like in image below.
    (vertical space between lines is increased, there is some free space at start of first line)
     ============
@@ -379,6 +378,36 @@ section .tm-content-box .tm-team-description-container p {
     text-indent: 30px;
     line-height: 200%;
     font-size: 16px;
+}
+
+
+/* 9 task
+*/
+
+.tm-content-box .text:after{
+    content: "New";
+    vertical-align:text-top;
+    color:red;
+    font-size: 8px;
+}
+.tm-content-box h2 ol a:hover{
+    color:silver;
+    text-decoration: none !important;
+}
+
+.tm-content-box .text:visited{
+    color:silver;
+    text-decoration: none;
+}
+
+
+/* 10 task */
+.blocks{
+    width:550px;
+}
+
+.blocks .tm-content-box .gallery-container li:nth-child(odd){
+    background-color:#dcdcdc;
 }
 
 /* Eleventh task
@@ -400,30 +429,29 @@ We need silver border on the bottom side of all list item. But last one should n
     color: #ff0000;
  }
 
-/* optional task */
- @media (max-width:1139px) and (min-width: 834px) {
-    .tm-sidebar{
-       overflow: hidden;
-       position: fixed;
-       top:0;
-       left:0;
-       width: 100%;
-       margin-bottom:300px;
-
-    }
-    
-    .tm-main-nav ul li{
-    display: inline;
-    text-align: center;
-    font-size: 16px;
-    border: none;
-    }
-
-    .tm-main-nav ul li a{
-        display:inline;
-        width: 50px;
-    }
-    .tm-main-content{
-        margin-left:0;
-    }
-}
+ @media screen and (max-width: 1139px), screen and (max-height:300px){
+    .tm-sidebar {
+        overflow: hidden;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        margin-bottom:300px;
+     }
+ 
+     .tm-main-nav ul li {
+     display: inline;
+     text-align: center;
+     font-size: 16px;
+     border: none;
+     }
+ 
+     .tm-main-nav ul li a {
+         display:inline;
+         width: 50px;
+     }
+ 
+     .tm-main-content{
+         margin-left:0;
+     }
+ }
