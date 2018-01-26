@@ -141,7 +141,7 @@ section .tm-content-box .tm-team-description-container p {
 }                 
 
 .heading:nth-child(3) li:nth-child(2):after,
-.tm-content-box:nth-child(3) li:nth-child(n+4):after {
+.heading:nth-child(3) li:nth-child(n+4):after {
     content:".";
 }
 
