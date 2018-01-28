@@ -51,13 +51,12 @@ section:nth-child(2) div div:nth-child(2) {
 /* 2. Overlapping.  This rules tuch another section with a same problem, so i didnt use id */
 
 .boxes {
-    margin-right:-1px;
+    margin-right: -1px;
 }
 
 .box {
     border-width: 0px !important;
     outline: 1px solid #C0C0C0;
-    position: relative;
 }
 
 /* 3. Change color of first letter in each paragraphs to #76cdd7,  Font size to 30px */
