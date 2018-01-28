@@ -9,7 +9,9 @@ body {
     padding-top: 0;
 }
 
-#about, .tm-sidebar, section:nth-child(n+3)  {
+#about,
+.tm-sidebar,
+section:nth-child(n+3)  {
     display: none;
 }
 
@@ -28,7 +30,7 @@ section:nth-child(2) div {
     padding: 0;
 }
 
-section:nth-child(2) div div:first-child h2{
+section:nth-child(2) div div:first-child(h2) {
     color:#0000FF;
 }
 
@@ -107,7 +109,7 @@ h2 + p {
 /* 8. Text in paragraph should look like in image below.
       (vertical space between lines is increased, there is some free space at start of first line) */
 
-section .tm-content-box .tm-team-description-container p {
+section :nth-child(2) p {
     text-indent: 30px;
     line-height: 220%;
 }
