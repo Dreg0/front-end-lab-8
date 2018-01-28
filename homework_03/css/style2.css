@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: rgba(198, 238, 252, 0.53); }
+
+#content {
+  max-width: 1000px;
+  padding-top: 100px;
+  margin: 0 auto;
+  background-color: #3b3b3b; }
