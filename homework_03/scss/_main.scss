@@ -1,3 +1,81 @@
+$text-color: null !default;
+// 
+
+//  Mixins for paragraphs titles links
+
+@mixin mainContentTitle {
+	h1 {
+		color: $titleColor;
+		text-align: center;
+		margin: 5px 40px 20px 0;
+	}
+}
+
+@mixin h2ContentTitle{
+    h2 {
+        color: $titleColor;
+        margin: 15px 0 25px 0;
+    }
+}
+
+@mixin pText{
+    p {
+    margin-bottom:20px;
+    }
+}
+
+@mixin links{
+		a{
+    &:link{
+        color: $linkColor;
+    }
+    
+    &:visited{
+        color:$titleColor;
+    }
+
+    &:hover{
+        color: lighten($linkColor,20%);
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+}
+}
+
+
+// 
+
+@mixin imgBorder{
+    img{
+        border: 2px solid $imgBorder;
+        padding: 2px;
+    }
+}
+
+@mixin leftImage{
+    .img-left{
+        float: left;
+        margin: 0 20px 10px 0;
+    }
+}
+
+@mixin rightImage{
+    .img-right{
+        float: right;
+    }
+}
+
+@mixin briefText {
+    .brief{
+        width:400px;
+        background-color: $briefColor;
+        float: left;
+        margin: 0 20px 20px 0;
+        padding: 18px 10px 22px 20px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +83,22 @@
 
 body {
     background-color: $bodyColor;
+    font-family: $mainFont;
+    font-size: $fontSize;
+
 }
 
 #content {
- max-width: 1000px;
- padding-top: 100px;
+ width: $contentWidth;
+ padding: 20px;
  margin: 0 auto;
- background-color:$contentColor;
-}
+ background-color: $contentColor;
+     @include mainContentTitle;
+     @include h2ContentTitle;
+     @include pText;
+     @include imgBorder;
+     @include leftImage;
+     @include rightImage;
+     @include briefText;
+     @include links;
+    }
