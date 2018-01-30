@@ -10,14 +10,6 @@ body {
   padding: 20px;
   width: 1000px;
   background-color: #ffffff; }
-  #content h1 {
-    text-align: center;
-    margin: 5px 0 25px 0;
-    color: #893c00;
-    text-transform: none; }
-  #content h2 {
-    color: #893c00;
-    margin: 15px 0 25px 0; }
   #content p {
     color: #000000;
     font-family: "Times New Roman", Times, serif;
@@ -47,70 +39,74 @@ body {
     color: #78a3cc;
     text-decoration: none;
     transition: 0.5s ease-out; }
-  #content table {
-    width: 95%;
-    border-collapse: collapse;
-    margin-bottom: 60px;
-    background-color: #ffffff; }
-    #content table caption {
-      text-align: right; }
-    #content table th {
-      background: #e0e0e0;
-      text-transform: uppercase;
-      font-weight: normal;
-      padding: 10px 15px;
-      text-align: left;
-      border-right: 1px solid #ffffff; }
-      #content table th:last-child {
-        border-right: none; }
-    #content table tr + tr {
-      border-bottom: 1px solid #e0e0e0; }
-    #content table tr td {
-      padding: 10px 15px;
-      color: #000000; }
-  #content .form fieldset {
+  #content h1 {
+    text-align: center;
+    margin: 5px 0 25px 0;
+    color: #893c00;
+    text-transform: none; }
+  #content h2 {
+    color: #893c00;
+    margin: 15px 0 25px 0; }
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  margin-bottom: 60px;
+  background-color: #ffffff; }
+  table caption {
+    text-align: right; }
+  table th {
+    background: #e0e0e0;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 10px 15px;
+    text-align: left;
+    border-right: 1px solid #ffffff; }
+    table th:last-child {
+      border-right: none; }
+  table tr + tr {
+    border-bottom: 1px solid #e0e0e0; }
+  table tr td {
+    padding: 10px 15px;
+    color: #000000; }
+
+.form fieldset {
+  border: none;
+  padding: 10px 0 10px 0; }
+.form .nameField {
+  /* perhaps using grid system will be better display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;*/
+  display: flex;
+  justify-content: space-between; }
+  .form .nameField input {
+    width: 480px; }
+.form label {
+  display: block;
+  color: #808080;
+  text-transform: uppercase;
+  margin-bottom: 5px; }
+.form input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+  display: inline-block; }
+.form textarea {
+  padding-top: 5px;
+  width: 100%;
+  height: auto;
+  color: #808080;
+  border: 1px solid #e0e0e0; }
+.form button {
+  width: 240px;
+  height: 50px;
+  margin: 20px 0;
+  border: 1px solid #3d70a1;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: transparent;
+  color: #3d70a1;
+  cursor: pointer; }
+  .form button:hover {
+    color: #9dbcda;
+    background-color: #3d70a1;
     border: none;
-    padding: 10px 0 10px 0; }
-  #content .form h2 {
-    margin-bottom: 10px; }
-  #content .form .nameField {
-    /* perhaps using grid system will be better
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    */
-    display: flex;
-    justify-content: space-between; }
-    #content .form .nameField input {
-      width: 480px; }
-  #content .form label {
-    display: block;
-    color: #808080;
-    text-transform: uppercase;
-    margin-bottom: 5px; }
-  #content .form input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #e0e0e0;
-    display: inline-block; }
-  #content .form textarea {
-    padding-top: 5px;
-    width: 100%;
-    height: auto;
-    color: #808080;
-    border: 1px solid #e0e0e0; }
-  #content .form button {
-    width: 240px;
-    height: 50px;
-    margin: 20px 0;
-    border: 1px solid #3d70a1;
-    text-transform: uppercase;
-    font-size: 20px;
-    background-color: transparent;
-    color: #3d70a1;
-    cursor: pointer; }
-    #content .form button:hover {
-      color: #9dbcda;
-      background-color: #3d70a1;
-      border: none;
-      transition: 0.5s ease-out; }
+    transition: 0.5s ease-out; }

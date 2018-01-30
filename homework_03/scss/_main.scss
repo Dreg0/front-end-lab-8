@@ -1,22 +1,6 @@
 
 //Mixins
 
-@mixin h1Title {
-	h1 {
-        text-align: $titleAlighn;
-        margin: 5px 0 25px 0;
-        color: $titleColor;
-        text-transform: $register;	
-	}
-}
-
-@mixin h2Title {
-    h2 {
-        color: $titleColor;
-        margin: 15px 0 25px 0;
-        }
-    }
-
 @mixin pText {
     p { color: $textColor;
         font-family: $mainFont;
@@ -120,12 +104,24 @@ body {
     padding: 20px;
     width: $contentWidth;
     background-color: $contentBgColor;
-    @include h1Title;
-    @include h2Title;
     @include pText;
     @include imageStyle;
     @include briefStyle;
     @include links;
+    
+    h1 {
+        text-align: $titleAlighn;
+        margin: 5px 0 25px 0;
+        color: $titleColor;
+        text-transform: $register;	
+    }
+    
+    h2 {
+        color: $titleColor;
+        margin: 15px 0 25px 0;
+        }
+    }
+
     table {
         width:$tableWidth;
         border-collapse: collapse;
@@ -148,27 +144,20 @@ body {
             }
 		}
     }
+
     .form {
         fieldset {
             border: none;
             padding: 10px 0 10px 0;
         }
 
-        h2{
-            margin-bottom: 10px;
-        }
-        
         .nameField {           
-/* perhaps using grid system will be better
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-*/  
+/* perhaps using grid system will be better display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;*/  
             display: flex;
             justify-content: space-between;
+
             input {
                 width: 480px;
-               
             }
         }
 
@@ -196,4 +185,3 @@ body {
 
         @include button;
     }
-}
