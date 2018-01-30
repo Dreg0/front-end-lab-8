@@ -1,80 +1,91 @@
-$text-color: null !default;
-// 
 
-//  Mixins for paragraphs titles links
+//Mixins
 
-@mixin mainContentTitle {
+@mixin h1Title {
 	h1 {
-		color: $titleColor;
-		text-align: center;
-		margin: 5px 40px 20px 0;
+        text-align: $titleAlighn;
+        margin: 5px 0 25px 0;
+        color: $titleColor;
+        text-transform: $register;	
 	}
 }
 
-@mixin h2ContentTitle{
+@mixin h2Title {
     h2 {
         color: $titleColor;
         margin: 15px 0 25px 0;
+        }
+    }
+
+@mixin pText {
+    p { color: $textColor;
+        font-family: $mainFont;
+        font-size: $fontSize;
+        padding: 0 0 20px 0;
     }
 }
 
-@mixin pText{
-    p {
-    margin-bottom:20px;
+@mixin imageStyle {
+    img {
+        border: 2px solid $imgBorderColor;
+        padding: $imgPadding;
+
+        &.img-left {
+            float:left;
+            margin: 0 20px 10px 0;
+        }
+
+        &.img-right {
+            float: right;
+            margin: 0 0 10px 25px; 
+        }  
     }
 }
 
-@mixin links{
-		a{
-    &:link{
-        color: $linkColor;
+@mixin briefStyle {
+    .brief {
+        background-color: $briefColor;
+        width: $briefWidth;
+        margin: $briefMargin;
+        padding: $briefPadding;
+        float: $briefFloat;
+        box-sizing: border-box;
+    }
+}
+
+@mixin links {
+    a {
+        &:link {
+            color: $linkColor;
+        }
+        &:visited {
+            color:$linkColor
+        }
+        &:hover {
+            color: lighten($linkColor,20%);
+            text-decoration: none;
+            transition: $linkTransition;
+        }
+    }
+}
+
+@mixin tableHeading {
+    th {
+        background: $tableHeadColor;
+        text-transform: $tableUpperCase;
+        font-weight: $fontWeight;
+        padding: 10px 15px;
+        text-align: left;
+        border-right: 1px solid $tableBorderColor;
+        &:last-child {
+            border-right:none;
+        }
     }
     
-    &:visited{
-        color:$titleColor;
-    }
-
-    &:hover{
-        color: lighten($linkColor,20%);
-        text-decoration: none;
-        transition: 0.5s;
-    }
-
-}
 }
 
 
-// 
-
-@mixin imgBorder{
-    img{
-        border: 2px solid $imgBorder;
-        padding: 2px;
-    }
-}
-
-@mixin leftImage{
-    .img-left{
-        float: left;
-        margin: 0 20px 10px 0;
-    }
-}
-
-@mixin rightImage{
-    .img-right{
-        float: right;
-    }
-}
-
-@mixin briefText {
-    .brief{
-        width:400px;
-        background-color: $briefColor;
-        float: left;
-        margin: 0 20px 20px 0;
-        padding: 18px 10px 22px 20px;
-    }
-}
+//End of Mixins
 
 * {
     margin: 0;
@@ -82,23 +93,86 @@ $text-color: null !default;
 }
 
 body {
-    background-color: $bodyColor;
-    font-family: $mainFont;
-    font-size: $fontSize;
-
+    background-color: $bodyColor;   
 }
 
 #content {
- width: $contentWidth;
- padding: 20px;
- margin: 0 auto;
- background-color: $contentColor;
-     @include mainContentTitle;
-     @include h2ContentTitle;
-     @include pText;
-     @include imgBorder;
-     @include leftImage;
-     @include rightImage;
-     @include briefText;
-     @include links;
+    margin: $positioning;
+    padding: 20px;
+    width: $contentWidth;
+    background-color: $contentBgColor;
+    @include h1Title;
+    @include h2Title;
+    @include pText;
+    @include imageStyle;
+    @include briefStyle;
+    @include links;
+
+    table {
+        width:$tableWidth;
+        border-collapse: collapse;
+        margin-bottom: 60px;
+        background-color:$tableBkgColor;
+        
+        caption {
+            text-align: right;
+        }
+        
+        @include tableHeading;
+
+        tr {
+
+			&+tr {
+				border-bottom: 1px solid $tableHeadColor;
+			}
+
+			td {
+                padding: 10px 15px;
+                color: $textColor;
+			}
+		}
+	}
+
     }
+
+
+
+
+
+//      table{
+//          
+
+//      }
+
+//      caption{
+//          text-align: right;
+//      }
+
+//     th{
+//         background-color: $tableHeadColor;
+//         text-transform: uppercase;
+//         padding: 10px 20px;
+//         text-align: left;
+//         font-weight:normal;
+//         border-right: 1px solid #ffffff;
+//      }
+//     tr {
+//     border-bottom: 1px solid  $tableHeadColor;
+// }
+//     td {
+//         padding: 10px 20px;
+//     }
+//     form{
+//         box-sizing: border-box;
+//         width:100%;
+//         text-transform: uppercase;
+//         .nameField{
+//             display: flex;
+//             justify-content: space-between;
+//             width: 100%;
+//         }
+//         fieldset{
+//             border:none;
+//         }
+//     }
+//     }

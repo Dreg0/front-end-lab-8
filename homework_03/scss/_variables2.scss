@@ -1,20 +1,42 @@
 
-// colors
+//body
+$mainFont: "Times New Roman", Times, serif;
+$fontSize: 16px;
 $bodyColor:rgba(198, 238, 252, 0.53);
-$briefColor:#fff178;
-$contentColor:#3b3b3b;
+
+//content
+$contentWidth: 1000px;
+$contentBgColor: #3b3b3b;
+$padding: 20px 20px 20px 20px;
+$positioning: 0 auto;
+
+//title h1 h2 text
+$titleAlighn: center;
+$h1Margin: 5px 40px 20px 0;
 $titleColor:#fccd10;
+$register: uppercase;
+$pBottom: 20px;
+$textColor: lighten( $contentBgColor, 100% );
+
+//img
+$imgPadding: 2px;
+$imgBorderColor: $titleColor;
+
+//brief
+$briefColor:#fff178;
+$briefWidth: 950px;
+$briefMargin: 0 0px 35px 0;
+$briefPadding: 20px;
+$briefFloat: none;
+
+//Links
+$linkColor:#f5c70f;
+$linkTransition: 0.5s ease-out;
+
+//Table
+$fontWeight: normal;
+$tableUpperCase:uppercase;
 $tableHeadColor:#94a34e;
 $tableBkgColor:#677d01;
-$linkColor:#f5c70f;
-
-// font
-$mainFont: "Times New Roman", Times, serif;
-$fontSize:16px;
-
-
-// size
-$contentWidth:1000px;
-
-
-$imgBorder:$titleColor;
+$tableBorderColor :#ffffff;
+$tableWidth:95%;
