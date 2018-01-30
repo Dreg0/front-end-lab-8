@@ -76,7 +76,7 @@
         font-weight: $fontWeight;
         padding: 10px 15px;
         text-align: left;
-        border-right: 1px solid $tableBorderColor;
+        border-right: $borderWidth solid $tableBorderColor;
         &:last-child {
             border-right:none;
         }
@@ -84,9 +84,28 @@
     
 }
 
-
+@mixin button {
+    button {
+        width: 240px;
+        height: 50px;
+        margin: 20px 0;
+        border: $borderWidth solid $buttonColor;
+        text-transform: $tableUpperCase;
+        font-size: $buttonFontSize;
+        background-color: $buttonBkgColor;
+        color: $buttonColor;
+        cursor: pointer;
+        &:hover {
+            color: lighten($buttonColor,30%);
+            background-color: $buttonColor;
+            border:none;
+            transition: $buttonTransition;
+        }
+    }
+}
 //End of Mixins
 
+// styles
 * {
     margin: 0;
     padding: 0;
@@ -107,7 +126,6 @@ body {
     @include imageStyle;
     @include briefStyle;
     @include links;
-
     table {
         width:$tableWidth;
         border-collapse: collapse;
@@ -121,58 +139,61 @@ body {
         @include tableHeading;
 
         tr {
-
-			&+tr {
-				border-bottom: 1px solid $tableHeadColor;
-			}
-
-			td {
+            &+tr {
+                border-bottom: $borderWidth solid $tableHeadColor;
+            }
+            td {
                 padding: 10px 15px;
                 color: $textColor;
-			}
+            }
 		}
-	}
-
     }
+    .form {
+        fieldset {
+            border: none;
+            padding: 10px 0 10px 0;
+        }
 
+        h2{
+            margin-bottom: 10px;
+        }
+        
+        .nameField {           
+/* perhaps using grid system will be better
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+*/  
+            display: flex;
+            justify-content: space-between;
+            input {
+                width: 480px;
+               
+            }
+        }
 
+        label {
+            display: block;
+            color: $formTextColor;
+            text-transform: $tableUpperCase;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: $maxWidth;
+            padding: 5px;
+            border: $borderWidth solid $tableHeadColor;
+            display: inline-block;
+        }
 
+        textarea {
+            padding-top: 5px;
+            width: $maxWidth;
+            height: auto;
+            color: $textAreaColor;
+            border:  $borderWidth solid $tableHeadColor;
+        }
 
-
-//      table{
-//          
-
-//      }
-
-//      caption{
-//          text-align: right;
-//      }
-
-//     th{
-//         background-color: $tableHeadColor;
-//         text-transform: uppercase;
-//         padding: 10px 20px;
-//         text-align: left;
-//         font-weight:normal;
-//         border-right: 1px solid #ffffff;
-//      }
-//     tr {
-//     border-bottom: 1px solid  $tableHeadColor;
-// }
-//     td {
-//         padding: 10px 20px;
-//     }
-//     form{
-//         box-sizing: border-box;
-//         width:100%;
-//         text-transform: uppercase;
-//         .nameField{
-//             display: flex;
-//             justify-content: space-between;
-//             width: 100%;
-//         }
-//         fieldset{
-//             border:none;
-//         }
-//     }
-//     }
+        @include button;
+    }
+}
