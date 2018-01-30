@@ -16,7 +16,7 @@ $h1Margin: 5px 40px 20px 0;
 $titleColor:#fccd10;
 $register: uppercase;
 $pBottom: 20px;
-$textColor: lighten( $contentBgColor, 100% );
+$textColor:#ffffff;
 
 //img
 $imgPadding: 2px;
@@ -38,5 +38,22 @@ $fontWeight: normal;
 $tableUpperCase:uppercase;
 $tableHeadColor:#94a34e;
 $tableBkgColor:#677d01;
-$tableBorderColor :#ffffff;
+$tableBorderColor: $textColor;
 $tableWidth:95%;
+
+//form
+$formTextColor: $titleColor;
+$textAreaColor: #808080;
+
+//button
+$buttonFontSize: 20px;
+$buttonBkgColor:transparent;
+$buttonUpperCase: $tableUpperCase;
+$buttonColor: $linkColor;
+$buttonTransition: $linkTransition;
+
+// Border
+$borderWidth:1px;
+
+//width
+$maxWidth: 100%;

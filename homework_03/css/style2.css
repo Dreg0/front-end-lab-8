@@ -19,7 +19,7 @@ body {
     color: #fccd10;
     margin: 15px 0 25px 0; }
   #content p {
-    color: white;
+    color: #ffffff;
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     padding: 0 0 20px 0; }
@@ -67,4 +67,50 @@ body {
       border-bottom: 1px solid #94a34e; }
     #content table tr td {
       padding: 10px 15px;
-      color: white; }
+      color: #ffffff; }
+  #content .form fieldset {
+    border: none;
+    padding: 10px 0 10px 0; }
+  #content .form h2 {
+    margin-bottom: 10px; }
+  #content .form .nameField {
+    /* perhaps using grid system will be better
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    */
+    display: flex;
+    justify-content: space-between; }
+    #content .form .nameField input {
+      width: 480px; }
+  #content .form label {
+    display: block;
+    color: #fccd10;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  #content .form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #94a34e;
+    display: inline-block; }
+  #content .form textarea {
+    padding-top: 5px;
+    width: 100%;
+    height: auto;
+    color: #808080;
+    border: 1px solid #94a34e; }
+  #content .form button {
+    width: 240px;
+    height: 50px;
+    margin: 20px 0;
+    border: 1px solid #f5c70f;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: transparent;
+    color: #f5c70f;
+    cursor: pointer; }
+    #content .form button:hover {
+      color: #fbe9a2;
+      background-color: #f5c70f;
+      border: none;
+      transition: 0.5s ease-out; }

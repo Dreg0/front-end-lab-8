@@ -38,8 +38,22 @@ $fontWeight: normal;
 $tableUpperCase:uppercase;
 $tableHeadColor: #e0e0e0;
 $tableBkgColor: $contentBgColor;
-$tableBorderColor :#ffffff;
+$tableBorderColor :$contentBgColor;
 $tableWidth:95%;
 
+//form
+$formTextColor: #808080;
+$textAreaColor: $formTextColor;
 
-$formColor: #808080;
+//button
+$buttonFontSize: 20px;
+$buttonBkgColor:transparent;
+$buttonUpperCase: $tableUpperCase;
+$buttonColor: $linkColor;
+$buttonTransition: $linkTransition;
+
+// Border
+$borderWidth:1px;
+
+//width
+$maxWidth: 100%;
