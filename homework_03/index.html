@@ -127,29 +127,29 @@
       <form action="#" method="post">
         <div class="nameField">
           <fieldset>
-          <label>Ім&#39я</label>
-          <input type="text" placeholder="Ведіть ім&#39я">
+          <label>Ім&#39;я</label>
+          <input type="text" name="name" placeholder="Ведіть ім&#39;я">
           </fieldset>
           <fieldset>
             <label>Прізвище</label>
-            <input type="text" placeholder="Ведіть прізвище">
+            <input type="text" name="surname" placeholder="Ведіть прізвище">
           </fieldset>
-          <!-- end of nameField  -->
+          <!-- end of .nameField div  -->
       </div>
       <div class="feedback">
         <fieldset>
             <label>Імейл</label>
-            <input type="email" placeholder="Ведіть імейл">
+            <input type="email" name="email" placeholder="Ведіть імейл">
         </fieldset>
         <fieldset>
             <label>Оцініть</label>
-            <input type="text">
+            <input name="estimate" type="text">
         </fieldset>
         <fieldset>
             <label>Напишіть відгук</label>
-            <input type="text" placeholder="залишити відгук">
+            <textarea rows=10 name="feedback">  Залишити відгук</textarea>
         </fieldset>
-        <!-- end of -->
+        <!-- end of .feedback div-->
       </div>
         <button type="submit">надіслати</button>
       </form>
