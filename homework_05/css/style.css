@@ -11,10 +11,13 @@ body {
     display: flex;
     margin: 0 auto;
 }
-   
+
+/* To avoid validator warning */
+
 .news h2 {
     display: none
 }
+
     /* Header */
     
 header .wrapper{
