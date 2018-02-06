@@ -1,0 +1,389 @@
+    /*General*/
+    
+body {
+    font:  14px/1.2 Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+}
+    
+.wrapper {
+    max-width: 1216px;
+    display: flex;
+    margin: 0 auto;
+}
+   
+.news h2 {
+    display: none
+}
+    /* Header */
+    
+header .wrapper{
+    width:100%;
+}
+    
+header {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+
+.logo_wrapper {
+    margin-right: 50px;
+}
+
+.logo {
+    max-width: 100%;   
+    width: auto;
+    height: auto;
+
+}
+    
+.header_navigation {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+          
+    }
+    
+.header_navigation ul {
+    list-style: none;
+    display: flex;
+    
+}
+    
+.header_navigation a {
+    margin-right: 20px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.4s ease-out;
+        
+}
+    
+.header_navigation a:hover {
+    transition: color 0.4s ease-out;
+    color: #39c2d7;
+}
+    
+.header_navigation .active {
+    color: #39c2d7;
+}
+    
+    /* Section Banner Styling */
+    
+.banner { 
+    height: 377px;
+    background: url('../img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;   
+}
+
+.banner .wrapper {
+    width: 100%;
+}
+    
+.title_box {
+    width: 350px;
+}
+    
+.title_box h1 {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1.4;
+}
+    
+    /* Section News Styling */
+    
+.news {
+     margin-top: 20px;
+}
+    
+.news_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+    
+.news_card {
+    padding: 20px;
+    background: #cccccc;
+    transition: 0.4s ease-out;
+}
+    
+.news_card:hover {
+    background-color: #39c2d7;
+    transition: 0.4s ease-out;
+}
+    
+.news_card a {
+    color: #464547;
+    text-decoration: none;
+}
+    
+.news_card img {
+    width: 100%
+}
+    
+.news_content h3 {
+    color: #333333;
+}
+
+.news_content p {
+    font-size: 16px;
+}
+    
+    /* Footer Styling */
+    
+footer .wrapper{
+    width: 100%;
+    }
+    
+footer {
+    background-color: #39c2d7;
+    display: flex;
+    margin-top: 20px;
+}
+    
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+    
+.footer_nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+    
+.footer_nav li{
+    margin-right: 20px;
+}
+    
+.footer_nav a {
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: 0.4s ease-out;
+}
+
+.footer_nav a:hover{
+    text-decoration: none;
+    transition: 0.4s ease-out;
+}
+
+footer p {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Media tablet */
+
+@media screen and (min-width: 575px) and (max-width: 900px) {
+
+    /* Header */
+
+    header .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        margin-bottom: 0;
+    }
+
+    .logo_wrapper {
+        margin: 0;
+    }
+
+    .header_navigation ul {
+        padding: 0;
+    }
+
+    .header_navigation li:first-child a{
+        color: #39c2d7;
+    }
+
+     .header_navigation .active {
+        color: #333333;
+    }
+
+    /* Banner */
+
+    .banner {
+        height: 520px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .banner .wrapper {
+        height: 100%;
+    }
+
+    .title_box{
+        width: 100%;
+        text-align: center;
+		margin-top: 50px;
+    }
+    .title_box h1{
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    /* News */
+
+    .news_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 0 20px;
+    }
+
+    .news_card {
+        padding: 20px 10px 30px;
+        background: #cccccc;
+        transition: 0.4s ease-out;
+    }
+    .news_card img {
+        width:90%;
+        margin-left: 5%;
+    }
+
+    /* footer */
+
+    footer .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nav ul {
+        margin-bottom: 10px;
+    }
+
+    .footer_nav li:last-child {
+        margin-right: 0;
+    }
+}
+
+        /* MOBILE */
+
+@media screen and (max-width: 575px) {
+
+    /* Header Styling */
+
+    header {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    header .wrapper {
+        flex-direction: column;
+    }
+
+    .logo_wrapper {
+        text-align: center;
+        margin: 0;
+    }
+
+    .header_navigation {
+        margin: 0;
+    }
+
+    .header_navigation ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header_navigation li {
+        padding: 10px 15px;
+        background: #eeeeee;
+        border-bottom: 1px solid #333333;
+    }
+
+    .header_navigation li:first-child {
+        border-top: 1px solid #333333;
+    }
+
+    .header_navigation li:last-child {
+        border-bottom: none;
+    }
+
+    .header_navigation a:hover {
+        color: #333333;
+    }
+
+    .header_navigation .active {
+        color: #333333;
+    }
+       
+    /* Banner Styling */
+
+	.banner {
+        height: 250px;
+    }
+    
+	.banner .wrapper {
+        height: 100%;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+	.title_box {
+        text-align: center;
+		width: 100%;
+		background: #39c2d7;
+		margin: 0 10px 15px;
+    }
+    
+	.title_box h1 {
+		font-size: 16px;
+    }
+    
+    /* News Styling */
+
+    .news_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .news_card {
+        padding-bottom: 0;   
+    }
+
+    .news_card h3 {
+        padding: 0;
+        margin: 5px 0;
+    }
+
+    .news_card p {
+        margin-top: 0;
+    }
+
+    /* Footer */
+
+    footer .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_nav ul li {
+        margin: 0 0 5px;
+    }
+    
+    footer p {
+        margin:0 5px 15px;
+        font-size: 12px;
+    }
+}
