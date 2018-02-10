@@ -1,20 +1,36 @@
 window.onload = function() {
-   
-    let eurRait = 33.2324;
-    let usdRait  = 27.1240;
+  var eurRait = 33.2324;
+  var usdRait = 27.124;
 
-    let eurAmount = +prompt('input amount of EURO');
-    let usdAmount = +prompt ('input amount of USD');
+  var eurAmount = Number(prompt("Enter ammount of EUR"));
+  var usdAmount = Number(prompt("Enter ammount of USD"));
 
- 
-    let usdToEur = eurRait / usdRait;
+  if (Math.sign(eurAmount) > 0 && Math.sign(usdAmount) > 0) {
+    var usdToEur = eurRait / usdRait;
     usdToEur = usdToEur.toFixed(2);
-    
-    let uahToUsd =  usdAmount * usdRait;
+
+    var uahToEur = eurAmount * eurRait;
+    uahToEur = uahToEur.toFixed(2);
+
+    var uahToUsd = usdAmount * usdRait;
     uahToUsd = uahToUsd.toFixed(2);
-    let uahToEur =  eurAmount * eurRait.toFixed(2);
-    uahToEur = uahToEur.toFixed(2); 
 
-    console.log (`${eurAmount} eur are equal to ${ uahToEur} UAH, ${usdAmount} USD are equal to ${uahToUsd}  UAH, one Euro is equal to ${usdToEur} dollars`) ;
-
-}
+    console.log(
+      `${eurAmount} eur are equal to ${uahToEur} UAH, ${usdAmount} USD are equal to ${uahToUsd} UAH, one Euro is equal to ${usdToEur} dollars`
+    );
+    // console.log(
+    //   eurAmount +
+    //     " EUR are equal to " +
+    //     uahToEur +
+    //     " UAH, " +
+    //     usdAmount +
+    //     " USD are equal to " +
+    //     uahToUsd +
+    //     " UAH, one Euro equals to:" +
+    //     usdToEur +
+    //     "dollars"
+    // );
+  } else {
+    console.log(" Incorrect input");
+  }
+};
