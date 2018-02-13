@@ -12,8 +12,6 @@
 
     if (play) {
         while (true && usedAttempts < 3 && nextLevel) {
-            // var randomNumber = Math.floor(Math.random() * (range + 1));
-            // console.log("randomized " + randomNumber);
             var playerTurn = Number(prompt(`Enter a number from 0 to ${range} \nAttempts left: ${attempts}\nYour Prize: ${currentPrize} $\nPossible prize on current attemp: ${prize}$`));
             if (playerTurn === randomNumber && playerTurn != isNaN) {
                 attempts = 3;
