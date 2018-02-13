@@ -11,7 +11,7 @@
             var nextLevel = true;
             var playAgain = 0;
             while (usedAttempts < 3 && nextLevel) {
-                var playerTurn = Number(prompt(`Enter a number from 0 to ${range} \nAttempts left: ${attempts}\nYour Prize: ${currentPrize} $\nPossible prize on current attemp: ${prize}$`));
+                var playerTurn = (prompt(`Enter a number from 0 to ${range} \nAttempts left: ${attempts}\nYour Prize: ${currentPrize} $\nPossible prize on current attemp: ${prize}$`));
                 if (playerTurn === randomNumber && playerTurn != isNaN) {
                     attempts = 3;
                     currentPrize = prize;
