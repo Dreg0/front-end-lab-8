@@ -6,5 +6,3 @@ function isPrime(number) {
   }
   return true;
 }
-
-// console.log(isPrime(43));
