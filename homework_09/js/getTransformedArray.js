@@ -1,12 +1,7 @@
 function getTransformedArray (array, invokFunc) {
     var newArr = [];
-    forEach(array, function(el){
-        newArr.push(invokFunc(array));
+    forEach(array, function(element){
+        newArr.push(invokFunc(element));
     });
     return newArr;
 }
-
-function increment(num) { 
-    return num + 1;
-    } 
-    console.log(getTransformedArray([1, 7, 20], increment));
