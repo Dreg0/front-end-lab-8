@@ -1,7 +1,7 @@
-function getTransformedArray (array, invokFunc) {
-    var newArr = [];
-    forEach(array, function(element){
-        newArr.push(invokFunc(element));
-    });
-    return newArr;
+function getTransformedArray(array, func) {
+	var newArr = [];
+	forEach(array, function (value) {
+		newArr.push(func(value));
+	});
+	return newArr;
 }

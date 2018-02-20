@@ -10,11 +10,3 @@ function cypherPhrase(obj, str) {
     });
     return str.join('');
 }
-
-var charactersMap = {
-    a: 'o',
-    c: 'd',
-    t: 'g'
-};
-
-console.log(cypherPhrase(charactersMap, 'kitty cat'));

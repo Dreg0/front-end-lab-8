@@ -10,11 +10,3 @@ function decypherPhrase(obj, str) {
     });
     return str.join('');
 }
-
-var charactersMap = {
-    a: 'o',
-    c: 'd',
-    t: 'g'
-};
-
-console.log(decypherPhrase(charactersMap, 'kiggy dog'));

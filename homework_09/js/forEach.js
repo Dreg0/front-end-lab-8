@@ -1,5 +1,5 @@
-function forEach(array, invokFunc) {
-    for (var i = 0; i < array.length; i++) {
-        invokFunc(array[i]);
-    }
+function forEach(array, func) {
+	for (var i = 0; i < array.length; i++) {
+		func(array[i]);
+	}
 }
