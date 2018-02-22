@@ -25,12 +25,12 @@ function fighter(properties) {
         },
 
         block: function () {
-            return Math.random() < 0.5;
+            return console.log(Math.random() < 0.5);
         },
 
         fight: function (enemy) {
             if (enemy.block()) {
-                console.log(enemy.getStats().name + ' blocked incoming damage ' + stats.name);
+                console.log(enemy.getStats().name + ' blocked incoming damage from ' + stats.name);
                 return false;
             }
             var enemyStats = enemy.getStats();
@@ -43,7 +43,9 @@ function fighter(properties) {
                 combatHistory.wins++;
                 EnemyCombatHistory.loses++;
                 console.log(stats.name + ' dealt damage to ' + enemy.getStats().name);
-            } 
+                return true;
+            }
+            
         }
     };
 }
@@ -72,24 +74,24 @@ var fighter3 = fighter({
 });
 
 fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
-fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
+// fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
 
 // /**
 //  * Fighter John
 //  * - Combat stats: { wins: 1, loses: 0 }
 //  * - Properties: { name: 'John', attack: 100, hp: 100 }
 //  */
-showResult(fighter1);
+// showResult(fighter1);
 
 // /** Fighter Kayn
 //  * - Combat stats: { wins: 0, loses: 0 }
 //  * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
 //  */
-showResult(fighter2);
+// showResult(fighter2);
 
 // /**
 //  * Fighter Bill
 //  * - Combat stats: { wins: 0, loses: 1 }
 //  * - Properties: { name: 'Bill', attack: 40, hp: 0 }
 //  */
-showResult(fighter3);
+// showResult(fighter3);
