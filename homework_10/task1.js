@@ -1,9 +1,7 @@
 function debounce(callback, ms) {
-  let timeoutId = null;
+  let timeoutId;
   return function () {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
+    clearTimeout(timeoutId);
     timeoutId = setTimeout(callback, ms);
   };
 }
