@@ -1,30 +1,3 @@
-/**
- * @typedef {Object} CombatHistory
- * @property {wins} number - Number of victories
- * @property {loses} number - Number of defeats
- */
-
-/**
- * @typedef {Object} Stats
- * @property {string} name - The name of fighter
- * @property {number} attack - The amount of attack of fighter
- * @property {number} hp - The total number of health point of fighter
- */
-
-/**
- * @typedef {Object} Fighter
- * @property {function} getName - Return name of the fighter
- * @property {function} fight - Return true if fighter make dmg to enemy, otherwise false
- * @property {function} block - Return true if enemy can block incoming damage, otherwise false (randomly)
- * @property {function} getStats - Retrurn {Stats} of fighter
- * @property {number} getCombatHistory - Return {CombatHistory} of previous fights
- */
-
-/**
- * Pretty print fighter's info
- * @param {Fighter} fighter - The fighter
- * DO NOT MODIFY
- */
 function fighter(properties) {
 
     var combatHistory = {
@@ -52,33 +25,35 @@ function fighter(properties) {
         },
 
         block: function () {
-            return Math.random() >= 0.5;
+            return Math.random() < 0.5;
         },
 
         fight: function (enemy) {
             if (enemy.block()) {
+                console.log(enemy.getStats().name + ' blocked incoming damage ' + stats.name);
                 return false;
             }
             var enemyStats = enemy.getStats();
             var EnemyCombatHistory = enemy.getCombatHistory();
+            var damage = enemy.getStats().hp - stats.attack;
 
             if (stats.attack >= enemyStats.hp) {
                 enemyStats = 0;
+                enemy.getStats().hp = damage;
                 combatHistory.wins++;
                 EnemyCombatHistory.loses++;
-            } else {
-                enemyStats.hp -= stats.attack;
-            }
+                console.log(stats.name + ' dealt damage to ' + enemy.getStats().name);
+            } 
         }
     };
 }
 
 function showResult(fighter) {
-    console.log('Fighter', fighter.getName());
-    console.log('- Combat stats:', fighter.getCombatHistory());
-    console.log('- Properties:', fighter.getStats());
-}
+    console.log('Fighter ', fighter.getName());
+    console.log('- Combat stats: ', fighter.getCombatHistory());
+    console.log('- Properties: ', fighter.getStats());
 
+}
 
 var fighter1 = fighter({
     name: 'John',
