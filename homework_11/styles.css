@@ -1,0 +1,39 @@
+:root {
+    --folder-color: #edbc0b;
+    --file-color: #bbbbbb;
+    --hover-color: #efefef;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-list {
+    padding: 0;
+}
+
+p {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+p:hover {
+    background-color: var(--hover-color);
+}
+
+.material-icons {
+    color: var(--folder-color);
+    padding-right: 10px;
+}
+
+.file {
+    color: var(--file-color);
+}
+
+.empty {
+    font-style: italic;
+}
